@@ -26,7 +26,7 @@ export default function Promise(executor) {
 }
 
 Promise.all = function(iterable) {
-    return toPromise(when.apply($, iterable));
+    return toPromise(when.apply(null, iterable));
 }
 
 Promise.race = function(iterable) {
