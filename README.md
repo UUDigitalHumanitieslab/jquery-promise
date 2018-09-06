@@ -35,3 +35,8 @@ This is a very thin wrapper around [`jQuery.Deferred`][2]. As a result, our wrap
 Our polyfill `Promise` interface has the same constructor, static methods and instance methods as [the standard][4]. However, objects returned after chaining `.then`, `.catch` and `.finally` lack the `.finally` method themselves. This is beyond our control, because jQuery constructs promise objects as plain objects in a closure and there is no prototype that we can extend. This is unlikely to cause problems in practice. You still get Promises/A+ compliant then-able objects.
 
 [4]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+
+
+*Made by*
+
+[![Digital Humanities Lab](http://dhstatic.hum.uu.nl/logo-lab/png/dighum-logo.png)](https://dig.hum.uu.nl)
