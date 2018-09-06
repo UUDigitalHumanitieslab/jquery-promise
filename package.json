@@ -10,8 +10,8 @@
     "es2015"
   ],
   "bugs": "https://github.com/UUDigitalHumanitieslab/jquery-promise/issues",
-  "repository": "github.com:UUDigitalHumanitieslab/jquery-promise",
-  "author": "Julian Gonggrijp (Utrecht University, Digital Humanities Lab)",
+  "repository": "github:UUDigitalHumanitieslab/jquery-promise",
+  "author": "Julian Gonggrijp, Digital Humanities Lab, Utrecht University",
   "license": "BSD-3-Clause",
   "main": "jquery-promise.js",
   "files": [
