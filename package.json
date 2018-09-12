@@ -15,17 +15,25 @@
   "license": "BSD-3-Clause",
   "main": "jquery-promise.js",
   "files": [
-    "*.js*"
+    "jquery-promise.js*"
   ],
   "scripts": {
-    "prepare": "babel jquery-promise.es6 -so jquery-promise.js"
+    "prepare": "babel jquery-promise.es6 -so jquery-promise.js",
+    "pretest": "yarn prepare && babel test.es6 -so test.js",
+    "test": "promises-aplus-tests test",
+    "prepublishOnly": "yarn test"
   },
-  "dependencies": {},
+  "dependencies": {
+    "jquery": "^3.3.1"
+  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
-    "babel-preset-env": "^1.7.0"
+    "babel-preset-env": "^1.7.0",
+    "babelify": "8",
+    "browserify": "^16.2.2",
+    "promises-aplus-tests": "^2.1.2"
   },
   "peerDependencies": {
     "jquery": "3"
@@ -33,16 +41,6 @@
   "babel": {
     "presets": [
       "env"
-    ],
-    "plugins": [
-      [
-        "transform-es2015-modules-umd",
-        {
-          "globals": {
-            "jquery": "$"
-          }
-        }
-      ]
     ]
   }
 }
