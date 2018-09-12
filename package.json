@@ -1,0 +1,48 @@
+{
+  "name": "jquery-promise",
+  "version": "1.0.0",
+  "description": "A lightweight Promise polyfill based on Promises/A+ compliant $.Deferred from jQuery 3",
+  "keywords": [
+    "jquery",
+    "promise",
+    "polyfill",
+    "es6",
+    "es2015"
+  ],
+  "bugs": "https://github.com/UUDigitalHumanitieslab/jquery-promise/issues",
+  "repository": "github:UUDigitalHumanitieslab/jquery-promise",
+  "author": "Julian Gonggrijp, Digital Humanities Lab, Utrecht University",
+  "license": "BSD-3-Clause",
+  "main": "jquery-promise.js",
+  "files": [
+    "*.js*"
+  ],
+  "scripts": {
+    "prepare": "babel jquery-promise.es6 -so jquery-promise.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
+    "babel-preset-env": "^1.7.0"
+  },
+  "peerDependencies": {
+    "jquery": "3"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ],
+    "plugins": [
+      [
+        "transform-es2015-modules-umd",
+        {
+          "globals": {
+            "jquery": "$"
+          }
+        }
+      ]
+    ]
+  }
+}
