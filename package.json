@@ -20,14 +20,15 @@
   "scripts": {
     "prepare": "babel jquery-promise.es6 -so jquery-promise.js"
   },
-  "dependencies": {
-    "jquery": "^3.3.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
     "babel-preset-env": "^1.7.0"
+  },
+  "peerDependencies": {
+    "jquery": "3"
   },
   "babel": {
     "presets": [
