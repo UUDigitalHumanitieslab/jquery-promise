@@ -17,11 +17,11 @@ jquery-promise is for you if the following conditions apply.
 ## Quickstart
 
 ```console
-$ npm i jquery-promise
+$ npm i @dhl-uu/jquery-promise
 ```
 
 ```js
-import 'jquery-promise';
+import '@dhl-uu/jquery-promise';
 ```
 
 This will only put the polyfill in global scope if there is no `Promise` global already. The polyfill implementation is also the default export of the module.
