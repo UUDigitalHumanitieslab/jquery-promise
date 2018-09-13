@@ -4,6 +4,7 @@ node_js:
     - node
 addons:
     chrome: stable
+sudo: required
 install: yarn install
 script: yarn test
 cache:
