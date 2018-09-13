@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+    - "8"
+    - node
+addons:
+    chrome: stable
+sudo: required
+install: yarn install
+script: yarn test
+cache:
+    directories:
+        - node_modules
+    yarn: true

@@ -2,6 +2,8 @@
 
 A lightweight Promise polyfill based on Promises/A+ compliant $.Deferred from jQuery 3.
 
+[![Build Status](https://travis-ci.com/UUDigitalHumanitieslab/jquery-promise.svg?branch=develop)](https://travis-ci.com/UUDigitalHumanitieslab/jquery-promise) [![Promises/A+ 1.1 compliant](https://promisesaplus.com/assets/logo-small.png)](https://promisesaplus.com/)
+
 
 ## Use case
 
@@ -15,11 +17,11 @@ jquery-promise is for you if the following conditions apply.
 ## Quickstart
 
 ```console
-$ npm i jquery-promise
+$ npm i @dhl-uu/jquery-promise
 ```
 
 ```js
-import 'jquery-promise';
+import '@dhl-uu/jquery-promise';
 ```
 
 This will only put the polyfill in global scope if there is no `Promise` global already. The polyfill implementation is also the default export of the module.
@@ -27,13 +29,9 @@ This will only put the polyfill in global scope if there is no `Promise` global 
 
 ## Limitations
 
-This is a very thin wrapper around [`jQuery.Deferred`][2]. As a result, our wrapper does not (yet) have a test suite. jQuery itself, including `Deferred`, is already extensively tested. If you need some reassurance, read [the source][3] (60 lines total).
+This is a very thin wrapper around [`jQuery.Deferred`][2]. Our polyfill `Promise` interface has the same constructor, static methods and instance methods as [the standard][4]. However, objects returned after chaining `.then`, `.catch` and `.finally` lack the `.finally` method themselves. This is beyond our control, because jQuery constructs promise objects as plain objects in a closure and there is no prototype that we can extend. This is unlikely to cause problems in practice. You still get Promises/A+ compliant then-able objects.
 
 [2]: https://api.jquery.com/category/deferred-object/
-[3]: https://github.com/UUDigitalHumanitieslab/jquery-promise/blob/develop/jquery-promise.es6
-
-Our polyfill `Promise` interface has the same constructor, static methods and instance methods as [the standard][4]. However, objects returned after chaining `.then`, `.catch` and `.finally` lack the `.finally` method themselves. This is beyond our control, because jQuery constructs promise objects as plain objects in a closure and there is no prototype that we can extend. This is unlikely to cause problems in practice. You still get Promises/A+ compliant then-able objects.
-
 [4]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
 
 
