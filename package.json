@@ -7,7 +7,8 @@
     "promise",
     "polyfill",
     "es6",
-    "es2015"
+    "es2015",
+    "promises-aplus"
   ],
   "bugs": "https://github.com/UUDigitalHumanitieslab/jquery-promise/issues",
   "repository": "github:UUDigitalHumanitieslab/jquery-promise",
