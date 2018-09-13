@@ -42,17 +42,11 @@ Promise.race = function(iterable) {
 }
 
 Promise.resolve = function(value) {
-    return new Promise((resolve, reject) => {
-        if (value.then && value.then instanceof Function) {
-            value.then(resolve, reject);
-        } else {
-            resolve(value);
-        }
-    });
+    return toPromise(Deferred().resolve(value));
 }
 
 Promise.reject = function(reason) {
-    return new Promise((resolve, reject) => reject(reason));
+    return toPromise(Deferred().reject(reason));
 }
 
 const local = global || self || window || Function('return this')();
