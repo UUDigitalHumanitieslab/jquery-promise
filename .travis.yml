@@ -1,6 +1,12 @@
 language: node_js
 node_js:
-  - "8"
-  - "lts/*"
+    - "8"
+    - node
+addons:
+    chrome: stable
 install: yarn install
 script: yarn test
+cache:
+    directories:
+        - node_modules
+    yarn: true
