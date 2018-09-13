@@ -1,5 +1,5 @@
 {
-  "name": "jquery-promise",
+  "name": "@dhl-uu/jquery-promise",
   "version": "1.1.0",
   "description": "A lightweight Promise polyfill based on Promises/A+ compliant $.Deferred from jQuery 3",
   "keywords": [
