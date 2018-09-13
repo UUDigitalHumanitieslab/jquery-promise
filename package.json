@@ -1,6 +1,6 @@
 {
   "name": "@dhl-uu/jquery-promise",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A lightweight Promise polyfill based on Promises/A+ compliant $.Deferred from jQuery 3",
   "keywords": [
     "jquery",
@@ -19,8 +19,8 @@
     "jquery-promise.js*"
   ],
   "scripts": {
-    "prepare": "babel jquery-promise.es6 -so jquery-promise.js --plugins=transform-es2015-modules-umd",
-    "pretest": "browserify test.es6 -d -o test.js --extension=.es6 -t [ babelify ]",
+    "prepare": "babel jquery-promise.es6 -so jquery-promise.js",
+    "pretest": "browserify test.es6 -d -o test.js --extension=.es6 -t [ babelify --no-babelrc --presets [ env ] ]",
     "test": "mocha-chrome test.html --reporter min",
     "prepublishOnly": "yarn test"
   },
@@ -42,6 +42,16 @@
   "babel": {
     "presets": [
       "env"
+    ],
+    "plugins": [
+      [
+        "transform-es2015-modules-umd",
+        {
+          "globals": {
+            "jquery": "jQuery"
+          }
+        }
+      ]
     ]
   }
 }
