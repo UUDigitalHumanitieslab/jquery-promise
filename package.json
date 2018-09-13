@@ -23,9 +23,7 @@
     "test": "promises-aplus-tests test",
     "prepublishOnly": "yarn test"
   },
-  "dependencies": {
-    "jquery": "^3.3.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
@@ -33,6 +31,7 @@
     "babel-preset-env": "^1.7.0",
     "babelify": "8",
     "browserify": "^16.2.2",
+    "jquery": "^3.3.1",
     "promises-aplus-tests": "^2.1.2"
   },
   "peerDependencies": {
