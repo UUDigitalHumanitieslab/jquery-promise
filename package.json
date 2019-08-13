@@ -19,18 +19,18 @@
     "jquery-promise.js*"
   ],
   "scripts": {
-    "prepare": "babel jquery-promise.es6 -so jquery-promise.js",
-    "pretest": "browserify test.es6 -d -o test.js --extension=.es6 -t [ babelify --no-babelrc --presets [ env ] ]",
+    "prepare": "babel --no-babelrc --presets @babel/preset-env --plugins @babel/plugin-transform-modules-umd -so jquery-promise.js jquery-promise.es6",
+    "pretest": "browserify test.es6 -d -o test.js --extension=.es6 -t [ babelify --no-babelrc --presets [ @babel/env ] ]",
     "test": "mocha-chrome test.html --reporter min",
     "prepublishOnly": "yarn test"
   },
   "dependencies": {},
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
-    "babel-preset-env": "^1.7.0",
-    "babelify": "8",
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-transform-modules-umd": "^7.2.0",
+    "@babel/preset-env": "^7.5.5",
+    "babelify": "^10.0.0",
     "browserify": "^16.2.2",
     "jquery": "^3.3.1",
     "mocha-chrome": "^1.1.0",
