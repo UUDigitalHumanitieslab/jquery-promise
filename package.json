@@ -32,8 +32,8 @@
     "@babel/plugin-transform-modules-umd": "^7.2.0",
     "@babel/preset-env": "^7.5.5",
     "babelify": "^10.0.0",
-    "browserify": "^16.2.2",
-    "jquery": "^3.3.1",
+    "browserify": "^16.5.0",
+    "jquery": "^3.4.1",
     "mocha-chrome": "^2.0.0",
     "promises-aplus-tests": "github:ShadSterling/promises-tests#patch-1"
   },
