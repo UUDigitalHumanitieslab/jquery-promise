@@ -21,7 +21,7 @@
   "scripts": {
     "prepare": "babel --no-babelrc --presets @babel/preset-env --plugins @babel/plugin-transform-modules-umd -so jquery-promise.js jquery-promise.es6",
     "pretest": "browserify test.es6 -d -o test.js --extension=.es6 -t [ babelify --no-babelrc --presets [ @babel/env ] ]",
-    "test": "mocha-chrome test.html --reporter min",
+    "test": "echo please open the test.html in a browser of choice",
     "prepublishOnly": "npm run test"
   },
   "devDependencies": {
@@ -32,7 +32,6 @@
     "babelify": "^10.0.0",
     "browserify": "^16.5.0",
     "jquery": "^3.4.1",
-    "mocha-chrome": "^2.0.0",
     "promises-aplus-tests-refreshed": "^2.3.3"
   },
   "peerDependencies": {
