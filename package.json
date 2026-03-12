@@ -20,10 +20,10 @@
   ],
   "scripts": {
     "prepare": "babel --no-babelrc --presets @babel/preset-env --plugins @babel/plugin-transform-modules-umd -so jquery-promise.js jquery-promise.es6",
-    "prepretest": "cd node_modules/promises-aplus-tests ; yarn prepublish",
-    "pretest": "yarn prepretest && browserify test.es6 -d -o test.js --extension=.es6 -t [ babelify --no-babelrc --presets [ @babel/env ] ]",
+    "prepretest": "cd node_modules/promises-aplus-tests ; npm run prepublish",
+    "pretest": "npm run prepretest && browserify test.es6 -d -o test.js --extension=.es6 -t [ babelify --no-babelrc --presets [ @babel/env ] ]",
     "test": "mocha-chrome test.html --reporter min",
-    "prepublishOnly": "yarn test"
+    "prepublishOnly": "npm run test"
   },
   "dependencies": {},
   "devDependencies": {
