@@ -20,12 +20,10 @@
   ],
   "scripts": {
     "prepare": "babel --no-babelrc --presets @babel/preset-env --plugins @babel/plugin-transform-modules-umd -so jquery-promise.js jquery-promise.es6",
-    "prepretest": "cd node_modules/promises-aplus-tests ; npm run prepublish",
-    "pretest": "npm run prepretest && browserify test.es6 -d -o test.js --extension=.es6 -t [ babelify --no-babelrc --presets [ @babel/env ] ]",
+    "pretest": "browserify test.es6 -d -o test.js --extension=.es6 -t [ babelify --no-babelrc --presets [ @babel/env ] ]",
     "test": "mocha-chrome test.html --reporter min",
     "prepublishOnly": "npm run test"
   },
-  "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
@@ -35,7 +33,7 @@
     "browserify": "^16.5.0",
     "jquery": "^3.4.1",
     "mocha-chrome": "^2.0.0",
-    "promises-aplus-tests": "github:ShadSterling/promises-tests#patch-1"
+    "promises-aplus-tests-refreshed": "^2.3.3"
   },
   "peerDependencies": {
     "jquery": "3"
